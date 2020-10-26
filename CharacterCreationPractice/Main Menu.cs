@@ -1,8 +1,9 @@
-﻿using System;
+﻿using CharacterCreationPractice.Initialization;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MainMenuProject
+namespace CharacterCreationPractice
 {
     class Main_Menu
     {
@@ -35,7 +36,7 @@ namespace MainMenuProject
             switch (key)
             {
                 case ConsoleKey.B:
-                    Start();
+                    new StartNewGame().Run();
                     break;
                 case ConsoleKey.R:
                     Resume();

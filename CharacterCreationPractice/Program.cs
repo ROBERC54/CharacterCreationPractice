@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MainMenuProject
+namespace CharacterCreationPractice
 {
     class Program
     {

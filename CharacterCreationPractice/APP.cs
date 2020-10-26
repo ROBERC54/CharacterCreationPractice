@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MainMenuProject
+namespace CharacterCreationPractice
 {
     class APP
     {
