@@ -30,7 +30,12 @@ namespace CharacterCreationPractice.Initialization
             switch(key)
             {
                 case ConsoleKey.Y:  //continue
-                    Console.WriteLine("Yes?");//currently returns to main menu
+                    Console.WriteLine("Yes?");
+                    if(Continue())
+                    {
+                        new CharacterStatGenerator().Run();
+                    }
+                    //currently returns to main menu
                     return true;
                     break;
 
@@ -41,6 +46,25 @@ namespace CharacterCreationPractice.Initialization
             }
             return false;//handles keys other than valid options
         }
-        public void Continue() { }
+        public bool Continue()
+        {
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("WARNING");
+                Console.WriteLine("WARNING");
+                Console.WriteLine("CATASTROPHIC DATA LOSS MAY OCCUR");
+                Console.WriteLine("Are you sure you wish to continue...?");
+                Console.WriteLine("Enter YES or NO");
+                string key = Console.ReadLine();
+                switch (key)
+                {
+                    case "YES":
+                        return true;
+                    case "NO":
+                        return false;
+                }
+            } while (true) ;
+        }
     }
 }

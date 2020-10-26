@@ -15,6 +15,7 @@ namespace CharacterCreationPractice.Initialization
             Console.WriteLine("Press any key to continue");
             Console.ReadKey();
             new AreYouSure().Run();
+            Console.WriteLine("Yo from SNG().Run();");
             Console.WriteLine("Press any key to continue");
             Console.ReadKey();
             Console.Clear();
