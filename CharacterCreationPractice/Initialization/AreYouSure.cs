@@ -7,8 +7,9 @@ namespace CharacterCreationPractice.Initialization
     //Called from StartNewGame.cs
     class AreYouSure
     {
-        public void Run() 
+        public void Run()
         {
+ //Console.WriteLine("Yo from AYS().Run();");
             bool quit;
             do
             {
@@ -20,6 +21,7 @@ namespace CharacterCreationPractice.Initialization
                 var key = continueSelect();
                 quit = UserChoice(key);
             } while (!quit);
+ //Console.WriteLine("Yo from AYS().Run();");
         }
         private ConsoleKey continueSelect() 
         {
@@ -40,7 +42,10 @@ namespace CharacterCreationPractice.Initialization
                     break;
 
                 case ConsoleKey.N:
+                    Console.Clear();
                     Console.WriteLine("No?  Returning to main menu...");
+                    Console.WriteLine("Press any key to continue.");
+                    Console.ReadKey();
                     return true;
                     break;
             }

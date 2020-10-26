@@ -12,15 +12,19 @@ namespace CharacterCreationPractice.Initialization
         List<string> readback;
         string characterName;
         string statSheet;
+        List<string> preppedTable;
         public void Run() 
         {
+//Console.WriteLine("Yo from CSG().Run();");
             Console.Clear();
             Console.WriteLine("What is your name?");
             characterName = Console.ReadLine();
+            prepTable();
             runStatSheet();
             runTempSheet();
 
             readItBack();
+//Console.WriteLine("Yo from CSG().Run();");
         }
         public void runStatSheet() 
         {
@@ -30,7 +34,7 @@ namespace CharacterCreationPractice.Initialization
             info.Add(characterName);
             info.Add("328");//HP
             info.Add("20");//MP
-            info.Add("100");//Stamina
+            info.Add("100");//STM
             info.Add("31");//ATK
             info.Add("45");//UDF
             info.Add("49");//LDF
@@ -56,15 +60,37 @@ namespace CharacterCreationPractice.Initialization
         public void readItBack() 
         {
             //want to read it back?
+            Console.Clear();
             readback = File.ReadAllLines(statSheet).ToList();
-            Console.WriteLine("Read it back");
+            Console.WriteLine("Character Info");
+            int i = 0;
+            List<string> chart = new List<string>();
             foreach (string line in readback)
             {
-                Console.WriteLine(line);
+                Console.WriteLine($"{preppedTable.ElementAt(i)}{line}");
+                i++;
             }
+
             Console.WriteLine("PAKTC");
             Console.ReadKey();
-
+            Console.Clear();
+        }
+        public void prepTable() 
+        {
+            List<string> chart = new List<string>();
+            chart.Add("Age: ");
+            chart.Add("Name: ");
+            chart.Add("HP:  ");
+            chart.Add("MP:  ");
+            chart.Add("STM: ");
+            chart.Add("ATK: ");
+            chart.Add("UDF: ");
+            chart.Add("LDF: ");
+            chart.Add("SPD: ");
+            chart.Add("INT: ");
+            chart.Add("AGL: ");
+            chart.Add("");
+            preppedTable = chart;
         }
     }
 }

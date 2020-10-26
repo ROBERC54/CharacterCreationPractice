@@ -11,14 +11,9 @@ namespace CharacterCreationPractice.Initialization
      //The class functions to start the game off and introduce the character.  It should save progress by the end of the sequence and pass to "Resume.cs"
         public void Run() 
         {
-            Console.WriteLine("Yo from SNG().Run();");
-            Console.WriteLine("Press any key to continue");
-            Console.ReadKey();
+//Console.WriteLine("Yo from SNG().Run();");
             new AreYouSure().Run();
-            Console.WriteLine("Yo from SNG().Run();");
-            Console.WriteLine("Press any key to continue");
-            Console.ReadKey();
-            Console.Clear();
+//Console.WriteLine("Yo from SNG().Run();");
         }
     }
 }
