@@ -5,6 +5,7 @@ using System.Text;
 
 namespace CharacterCreationPractice
 {
+    //Called from APP.cs
     class Main_Menu
     {
         public void Run()

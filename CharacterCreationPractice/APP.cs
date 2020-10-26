@@ -4,6 +4,7 @@ using System.Text;
 
 namespace CharacterCreationPractice
 {
+    //Called from Program.cs
     class APP
     {
         public void Run()

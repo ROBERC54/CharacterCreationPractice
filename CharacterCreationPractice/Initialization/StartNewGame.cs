@@ -4,6 +4,7 @@ using System.Text;
 
 namespace CharacterCreationPractice.Initialization
 {
+    //Called from Main_Menu.cs
     public class StartNewGame
     {//From the MainMenu screen, functionality results from whether the User selects "Play Game", "Resume", "How to", or "Quit."
      //This class will handle the case of "Play Game" when called from within Main_Menu.cs
